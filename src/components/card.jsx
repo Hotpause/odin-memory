@@ -1,5 +1,10 @@
-const Card = ({ name, onClick }) => {
-  return <button onClick={onClick}>{name}</button>;
+const Card = ({ name, image, onClick }) => {
+  return (
+    <button onClick={onClick}>
+      <img className="pokemon-image" src={image} alt={name} />
+      <h3>{name.toUpperCase()}</h3>
+    </button>
+  );
 };
 
 export default Card;

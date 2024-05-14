@@ -2,8 +2,8 @@
 const Score = ({ score, maxScore }) => {
   return (
     <>
-      <h2>score = {score}</h2>
-      <h2>max score = {maxScore}</h2>
+      <h2>Score : {score}</h2>
+      <h2>High Score : {maxScore}</h2>
     </>
   );
 };

@@ -30,6 +30,7 @@ const Grid = ({ onScore, onReset, cards, setCards }) => {
         <Card
           key={index}
           name={card.name}
+          image={card.image}
           clicked={card.clicked}
           onClick={() => handleClick(card.name)}
         />
