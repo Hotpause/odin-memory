@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Score from "./components/score";
+import Score from "./components/Score";
 import Grid from "./components/grid";
 import "./App.css";
 
