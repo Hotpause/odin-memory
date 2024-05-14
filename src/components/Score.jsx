@@ -2,10 +2,11 @@
 const Score = ({ score, maxScore }) => {
   return (
     <>
-      <h2>Score : {score}</h2>
-      <h2>High Score : {maxScore}</h2>
+      <h3>Score : {score}</h3>
+      <h3>High Score : {maxScore}</h3>
     </>
   );
 };
 
 export default Score;
+//t
