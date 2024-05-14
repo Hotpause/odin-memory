@@ -89,7 +89,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className="container">
       <h1>Memory Game</h1>
       <Score score={score} maxScore={maxScore} />
       <Grid
@@ -98,7 +98,7 @@ function App() {
         cards={cards}
         setCards={setCards}
       />
-    </>
+    </div>
   );
 }
 
