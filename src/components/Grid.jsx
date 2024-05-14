@@ -1,6 +1,6 @@
 // import { useState } from "react";
-import Card from "./card";
-import shuffleArray from "./shuffle";
+import Card from "./Card";
+import shuffleArray from "./Shuffle";
 
 const Grid = ({ onScore, onReset, cards, setCards }) => {
   const handleClick = (cardName) => {
