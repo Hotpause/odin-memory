@@ -1,20 +1,27 @@
 // import { useState } from "react";
 import Card from "./card";
+import shuffleArray from "./shuffle";
 
 const Grid = ({ onScore, onReset, cards, setCards }) => {
   const handleClick = (cardName) => {
-    const newcards = cards.map((item) => {
-      if (item.name === cardName) {
-        if (item.clicked) {
-          onReset();
-        } else {
+    const isCardClicked = cards.find(
+      (item) => item.name === cardName && item.clicked
+    );
+
+    if (isCardClicked) {
+      onReset();
+      const newCards = cards.map((item) => ({ ...item, clicked: false }));
+      setCards(newCards);
+    } else {
+      const newCards = cards.map((item) => {
+        if (item.name === cardName) {
           onScore();
+          return { ...item, clicked: true };
         }
-        return { ...item, clicked: true };
-      }
-      return item;
-    });
-    setCards(newcards);
+        return item;
+      });
+      setCards(shuffleArray(newCards));
+    }
   };
 
   return (

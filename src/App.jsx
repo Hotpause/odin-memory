@@ -16,15 +16,17 @@ function App() {
   );
 
   const handleScore = () => {
-    setScore((s) => s + 1);
-    if (score + 1 > maxScore) {
-      setMaxScore(score + 1);
-    }
+    setScore((prevScore) => {
+      const newScore = prevScore + 1;
+      if (newScore > maxScore) {
+        setMaxScore(newScore);
+      }
+      return newScore;
+    });
+    console.log(cards);
+    console.log("cards");
   };
   const handleResetScore = () => {
-    const newCards = cards.map((card) => ({ ...card, clicked: false }));
-    setCards(newCards);
-    console.log(newCards); // Log the updated cards array
     setScore(0);
   };
 
