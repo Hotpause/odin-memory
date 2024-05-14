@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Score from "./Components/Score";
-import Grid from "./Components/Grid";
+import Score from "./components/Score";
+import Grid from "./components/Grid";
 import "./App.css";
 
 function App() {
